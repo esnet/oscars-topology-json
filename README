@@ -1,0 +1,13 @@
+The contents of this directory are used to share the OSCARS topology and circuit list as a JSON file.
+
+Starting the service: 
+/etc/init.d/topology-publisher start
+
+Stopping the service: 
+/etc/init.d/topology-publisher stop
+
+Restarting the service: 
+/etc/init.d/topology-publisher restart
+
+Checking if service is running: 
+/etc/init.d/topology-publisher status
