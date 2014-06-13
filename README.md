@@ -12,16 +12,19 @@ System Requirements
 Installing
 ----------
 
- 1. Checkout the project from git:
-```
+1. Checkout the project from git
+   ```
 git clone https://github.com/esnet/oscars-topology-json.git ./oscars-topology-json
-```
- 1. Move to */opt/topology_publisher*
-```
+   ```
+
+2. Move to */opt/topology_publisher*
+   ```
 mv oscars-topology-json /opt/topology_publisher
-```
- 1. Edit database and XML file properties in *bin/topology_publisher.py*
-```python
+   ```
+
+3. Edit database and XML file properties in *bin/topology_publisher.py*
+
+   ```python
 class EomplsIDRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     dbhost='localhost' #database host
     dbuser='oscars' #database user
@@ -32,16 +35,20 @@ class EomplsIDRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         "/opt/topology_publisher/topologies/esnet-cp.xml",
         "/opt/topology_publisher/topologies/esnet-ps.xml"
     ]
-```
- 1. Install the start-up scripts
-```
+   ```
+
+4. Install the start-up scripts
+
+   ```
 mv init_scripts/topology_publisher /etc/init.d/topology_publisher
-```
- 1. Set to boot on start-up
-```
+   ```
+
+5. Set to boot on start-up
+
+   ```
 chkconfig --add topology_publisher
 chkconfig topology_publisher on
-```
+   ```
 
 Running
 -------
